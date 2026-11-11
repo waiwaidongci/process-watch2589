@@ -1,0 +1,1 @@
+export const number=(n:number|undefined,d=3)=>n===undefined?'—':n.toLocaleString('zh-CN',{maximumFractionDigits:d,minimumFractionDigits:d});export const time=(s:string)=>new Date(s).toLocaleString('zh-CN',{hour12:false});

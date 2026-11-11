@@ -1,0 +1,1 @@
+import {request} from './client';import {Baseline} from '../types/domain';export const getBaselines=()=>request<Baseline[]>('/baselines');export const freezeBaseline=(data:{name:string;stream_id:number;sample_count:number})=>request<Baseline>('/baselines',{method:'POST',body:JSON.stringify(data)});

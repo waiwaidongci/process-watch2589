@@ -1,0 +1,1 @@
+import {useEffect} from 'react';import {useProcess} from '../stores/process';export function useProcessData(poll=false){const state=useProcess();useEffect(()=>{state.refresh();if(poll){const id=setInterval(state.refresh,2000);return()=>clearInterval(id)}},[state.refresh,poll]);return state;}
